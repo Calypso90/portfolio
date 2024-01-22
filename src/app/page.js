@@ -1,95 +1,61 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaNpm } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { TbBrandVscode } from "react-icons/tb";
+import { FaSlack } from "react-icons/fa6";
+import { FaTrello } from "react-icons/fa";
+import { SiCanva } from "react-icons/si";
+import Link from "next/link.js";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
+    <div id="aboutPage">
+      <div id="aboutLeft">
+        <img id="avatar" src="avatar.png" />
+        <Link href={`/resume`}>
+          <button>RESUME</button>
+        </Link>
+        <Link href={`/portfolio`}>
+          <button>PORTFOLIO</button>
+        </Link>
+      </div>
+      <div id="aboutRight">
+        <p id="aboutMe">
+          Hey, my name is Calypso and I'm transitioning from the arts into tech.
+          I'm originally from South Florida and recently moved up to Georgia. I
+          love building fun, user friendly web applications with clean designs .
+          In my free time I enjoy gaming, painting, watching anime, exploring
+          local spots, and learning something new.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <div id="tech">
+          <p id="techTitle">TECH STACK</p>
+          <p id="techStack">
+            <IoLogoJavascript style={{ color: "#f0db4f" }} />
+            <FaReact style={{ color: "#61dafb" }} />
+            <FaHtml5 style={{ color: "#e44d26" }} />
+            <FaCss3Alt style={{ color: "#1572b6" }} />
+            <FaNodeJs style={{ color: "#83cd29" }} />
+            <SiNextdotjs />
+            <FaGitAlt style={{ color: "#f34f29" }} />
+            <FaGithub style={{ color: "#7927d2" }} />
+            <BiLogoPostgresql style={{ color: "#336791" }} />
+            <FaNpm style={{ color: "#812829" }} />
+            <FaPython style={{ color: "#3673a8" }} />
+            <TbBrandVscode style={{ color: "#3c99d4" }} />
+            <FaSlack style={{ color: "azure" }} />
+            <FaTrello style={{ color: "#23719f" }} />
+            <SiCanva style={{ color: "#00c4cc" }} />
+          </p>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
